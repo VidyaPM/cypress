@@ -16,7 +16,7 @@ it("check for create account", () => {
 it("enter already registered email address", () => {
     cy.get("#email").click();
     cy.get("input[name=email_create].type(email)");
-    cy.get("#SubmitCreate");
+    cy.get("#SubmitCreate").click();
     cy.wait(2000);
 })
 
