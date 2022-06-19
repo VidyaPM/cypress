@@ -1,9 +1,9 @@
 Cypress.Commands.add("Login", () => {
     cy.log("login");
-    const username = Cypress.env("username");
+    const username = Cypress.env("email");
     const password = Cypress.env("Password");
-    const baseURL = Cypress.env("baseUrl");
-    cy.task("login", { username: username, password: password, baseURL: baseURL }, { log: false }).then(cookies => {
+    const url = Cypress.env("baseUrl");
+    cy.task("login", { email, password, url }, { log: false }).then(cookies => {
       cookies.forEach((cookie) => {
           cy.setCookie(cookie.name, cookie.value, {
               domain: cookie.domain,

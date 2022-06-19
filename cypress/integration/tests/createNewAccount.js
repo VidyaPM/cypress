@@ -3,7 +3,7 @@
 const custFirstName = "Jack_ ";
 const custLastName = "Mill_ ";
 const email = "jack_mill_ ";
-const password = "jackie&007_ ";
+const password = "jackie&007";
 const firstName = "MrJack_ ";
 const lastName = "Millie_ ";
 const address = "Mesuem Road_ ";
@@ -20,7 +20,7 @@ it("automation practice test", () => {
 
 //create new account
 it("create new account", () => {
-    cy.get('.header_user_info > .login').click();
+    cy.get('.login').click();
     cy.contains('Create an account').should('exist');
     cy.contains('Email address').should("be.visible");
     cy.get(("#email_create")).type("input[name=email_create]", email);
