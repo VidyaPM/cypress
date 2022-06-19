@@ -55,8 +55,8 @@ it("enter personal information", () => {
 //check for my account created successfully
 it("enter personal information", () => {
     cy.get("#center_column")
-    .contains("My account")
-    .should("be.visible");
+        .contains("My account")
+        .should("be.visible");
 })
 
 //SignOut

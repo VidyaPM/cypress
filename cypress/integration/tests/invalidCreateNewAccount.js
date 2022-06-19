@@ -23,6 +23,6 @@ it("enter already registered email address", () => {
 //account error message
 it("shows error message", () => {
     cy.get("#create_account_error")
-    .contains("An account using this email address has already been registered. Please enter a valid password or request a new one.")
-    .should("be.visible");
+        .contains("An account using this email address has already been registered. Please enter a valid password or request a new one.")
+        .should("be.visible");
 })

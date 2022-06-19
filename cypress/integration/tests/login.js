@@ -14,3 +14,12 @@ it("login with already registered account", () => {
     cy.type("input[name=passwd].type(`${password}{enter}");
     cy.get(SubmitLogin).click();
 });
+
+//check for successfully logged-in with already registered details
+it("enter personal information", () => {
+    cy.get("#center_column")
+        .contains("My account")
+        .should("be.visible");
+    cy.get('.info-account')
+        .contains("Welcome to your account. Here you can manage all of your personal information and orders.")
+})
