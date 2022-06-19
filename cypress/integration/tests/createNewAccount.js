@@ -12,7 +12,7 @@ const postcode = "10014";
 const mobileNo = +19172746166;
 const myAddress = "#98 building, NY_ ";
 
-
+//Navigate to the URL
 it("automation practice test", () => {
     cy.visit("http://automationpractice.com/index.php");
     cy.contains("'Your Logo").should("be.visible");
