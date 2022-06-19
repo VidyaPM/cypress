@@ -37,16 +37,16 @@ it("enter personal information", () => {
     let number = Math.floor((Math.random() * 1000000) + 1);
     cy.get("#customer_firstName").type(`${custFirstName}${number}`);
     cy.get("#customer_lastName").type(`${custLastName}${number}`);
-    cy.get("#email").type(`${email}${number}` + "@gmail.com");
+    //cy.get("#email").type(`${email}${number}` + "@gmail.com"); // added by default
     cy.get("#passwd").type(`${password}${number}`);
-    cy.get("#firstname").type(`${firstName}${number}`);
-    cy.get("#lastname").type(`${lastName}${number}`);
+    //cy.get("#firstname").type(`${firstName}${number}`);       // added by default
+    //cy.get("#lastname").type(`${lastName}${number}`);        // added by default
     cy.get("#address1").type(`${address}${number}`);
     cy.get("#city").type(`${city}${number}`);
     cy.get("#uniform-id_state").click();
     cy.contains("New York").click();
     cy.get("#postcode").type(`${city}${number}`);
-    cy.get("#id_country").contains("United States").click();
+    //cy.get("#id_country").contains("United States").click();  // selected by default
     cy.get("#phone_mobile").type(`${mobileNo}${number}`);
     cy.get("#alias").type(`${myAddress}${number}`);
     cy.get("#submitAccount").click();
@@ -59,3 +59,7 @@ it("enter personal information", () => {
     .should("be.visible");
 })
 
+//SignOut
+it("Logout", () => {
+    cy.get('.logout').click();
+})
