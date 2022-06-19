@@ -1,0 +1,27 @@
+{
+    "baseUrl": "http://automationpractice.com/index.php",
+    "integrationFolder": "cypress/tests",
+    "chromeWebSecurity": false,
+    "pluginsFile": "cypress/plugins/index.js",
+    "supportFile": "cypress/support/index.js",
+    "downloadsFolder":"cypress/fixtures/downloads",
+    "screenshotsFolder": "cypress/mochawesome/screenshots",
+    "reporter": "cypress-multi-reporters",
+      "reporterOptions": {
+          "reporterEnabled": "mochawesome",
+          "mochawesomeReporterOptions": {
+              "reportDir": "cypress/mochawesome/mocha",
+              "quite": true,
+              "overwrite": false,
+              "html": false,
+              "json": true
+          }
+      },
+      "env": {
+        "username": "",
+        "password": ""
+        },
+    "viewportWidth": 1600,
+    "viewportHeight": 1200,
+    "experimentalNetworkStubbing": true
+  }
