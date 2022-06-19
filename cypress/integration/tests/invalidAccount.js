@@ -6,15 +6,14 @@ it("automation practice test", () => {
     cy.visit("http://automationpractice.com/index.php");
 })
 
-//Sign In with registered account - email & password taken from from cypess.env.json file
-it("login with already registered account", () => {
+it("check for create account", () => {
     cy.get('.login').click();
     cy.contains('Create an account').should('exist');
     cy.contains('Email address').should("be.visible");
 })
 
 //enter already existed email address
-it("enter incorrect email address", () => {
+it("enter already registered email address", () => {
     cy.get("#email").click();
     cy.get("input[name=email_create].type(email)");
     cy.get("#SubmitCreate");
